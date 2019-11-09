@@ -14,8 +14,9 @@
 #APIs to be used: 
     Weather API - Chris 
     Google maps API - Danielle 
-    Hiking project API - Chris 
+    Hiking project API - Ashish  
     Yelp API - Ashish 
+    Passport API - Chris 
 
 #Breakdowns of tasks: 
     Design UI (Danielle & Ashish)
