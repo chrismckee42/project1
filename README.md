@@ -12,6 +12,7 @@
     The home page has a search bar where user searches for a hike according to their preferred filters. When the users search for the hike, they will get a list of options. When they click on their preferred option, they enter a page with all the details of their hike. They can later save the hike into their favorites list. 
 
 #APIs to be used: 
+
     Hiking project API - Chris  
     Yelp API - Ashish 
     
