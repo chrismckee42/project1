@@ -28,5 +28,3 @@
     click on Hike
         return details about hike (Chris)
         return Yelp suggestions (Ashish)
-
-      
