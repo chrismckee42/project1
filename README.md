@@ -12,18 +12,20 @@
     The home page has a search bar where user searches for a hike according to their preferred filters. When the users search for the hike, they will get a list of options. When they click on their preferred option, they enter a page with all the details of their hike. They can later save the hike into their favorites list. 
 
 #APIs to be used: 
-    Weather API - Chris 
-    Google maps API - Danielle 
-    Hiking project API - Ashish  
+    Hiking project API - Chris  
     Yelp API - Ashish 
-    Passport API - Chris 
+    
 
 #Breakdowns of tasks: 
     Design UI (Danielle & Ashish)
-        create navbar with: search page & my hikes
         create search bar
-    create firebase app (Chris)
     Implement APIs - (according to list above)
-    Research new technologies (all)
+
+    input location
+        use algolia places to autocomplete place name (Danielle)
+        return list of hikes (Chris)
+    click on Hike
+        return details about hike (Chris)
+        return Yelp suggestions (Ashish)
 
       
