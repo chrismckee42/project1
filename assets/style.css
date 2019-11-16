@@ -1,0 +1,22 @@
+body { 
+    background: url( ../assets/background.jpg) no-repeat center center fixed;
+    -webkit-background-size:
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container { 
+    margin-top: 100px;
+    width: 600px;
+}
+
+h1 { 
+    
+    font-family: 'Pacifico', cursive;
+}
+
+p { 
+    font-family: 'Pacifico', cursive;
+    font-family: 'Acme', sans-serif;
+}
