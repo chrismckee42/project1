@@ -60,7 +60,7 @@ function getHikeInfo(lat, lon, rad) {
       hikeDiv.attr("lat", results[i].latitude)
       hikeDiv.attr("lon", results[i].longitude)
       //adds trail name and distance
-      var name = $("<div>").text(results[i].name)
+      var name = $("<br><div>").text(results[i].name)
       var dist = $("<div>").text("Distance: " + results[i].length + " miles")
       //adds trail image
       var trailImage = $("<img>")
