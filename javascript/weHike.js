@@ -1,3 +1,22 @@
+(function() {
+    var placesAutocomplete = places({
+      appId: 'pl02J9DTRSCU',
+      apiKey: 'f099e7b02e4b0724d8cdb3f3ff4b3307',
+      container: document.querySelector('#address')
+    });
+  
+    var $address = document.querySelector('#address-value')
+    placesAutocomplete.on('change', function(e) {
+      $address.textContent = e.suggestion.value
+    });
+  
+    placesAutocomplete.on('clear', function() {
+      $address.textContent = 'none';
+    });
+  
+  })();
+
+
 function getHikeInfo(lat, lon, rad) {
 
     var queryURL = "https://www.hikingproject.com/data/get-trails?"
