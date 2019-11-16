@@ -1,3 +1,6 @@
+
+var latlng;
+
 (function() {
     var placesAutocomplete = places({
       appId: 'pl02J9DTRSCU',
@@ -8,10 +11,13 @@
     var $address = document.querySelector('#address-value')
     placesAutocomplete.on('change', function(e) {
       $address.textContent = e.suggestion.value
+      latlng = e.suggestion.latlng;
+      console.log(latlng);
     });
   
     placesAutocomplete.on('clear', function() {
       $address.textContent = 'none';
+
     });
   
   })();
