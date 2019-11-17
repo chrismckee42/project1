@@ -20,3 +20,8 @@ p {
     font-family: 'Pacifico', cursive;
     font-family: 'Acme', sans-serif;
 }
+
+img { 
+    height: 200px;
+    width: 200px;
+}
