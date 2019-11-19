@@ -1,6 +1,3 @@
-
-
-
 var latlng;
 var longitude;
 var latitude;
@@ -33,7 +30,6 @@ var latitude;
 
 
 function getHikeInfo(lat, lon, rad) {
-
   //constructs query
   var queryURL = "https://www.hikingproject.com/data/get-trails?"
   queryURL += "lat=" + lat
@@ -78,3 +74,55 @@ function getHikeInfo(lat, lon, rad) {
   });
 
 }
+
+  }).then(function (response) //hiking trail data
+  {
+    console.log('response');
+    console.log(response);
+      var results = response.trails
+      $("#inputHikes").empty()
+      //loops through all the returned trails
+      for (let i = 0; i < results.length; i++)
+      {
+        //for ea. hiking trail save lat/long to these variable
+        latitude =  results[i].latitude;
+        longitude = results[i].longitude;
+        var weatherURL = "http://api.weatherbit.io/v2.0/current";
+        weatherURL = weatherURL + "?key=fb86184ee63d4019a19812bec4768676";
+        weatherURL = weatherURL + "&lat=" + latitude + "&lon=" + longitude;
+        weatherURL = weatherURL + "&units=I";
+        $.ajax
+          ({
+            url: weatherURL,
+            method: "GET",
+            async: false,
+            datatype: JSON,
+          }).then(function (WeatherResponse)
+          {
+            console.log('WeatherResponse');
+            console.log(WeatherResponse);
+            var weather =  WeatherResponse.data[0].temp;
+            const hikeDiv = $("<div>")
+            //adds Identifiers for Yelp API
+            hikeDiv.addClass("hike")
+            hikeDiv.attr("lat", results[i].latitude) 
+            hikeDiv.attr("lon", results[i].longitude)
+            //adds trail name and distance
+            var name = $("<br><div>").text(results[i].name)
+            var dist = $("<div>").text("Distance: " + results[i].length + " miles");
+            var wh = $("<div>").text("weather: " +weather);
+            //adds trail image
+            var trailImage = $("<img>")
+            trailImage.attr("src", results[i].imgSmall)
+            trailImage.addClass("trail-pic")
+            //appends trail to page
+            hikeDiv.append(name);
+            hikeDiv.append(dist);
+            hikeDiv.append(wh);
+            hikeDiv.append(trailImage)
+            $("#inputHikes").append(hikeDiv)
+        })
+      }
+    });
+}
+
