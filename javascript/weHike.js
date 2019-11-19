@@ -78,7 +78,7 @@ function getHikeInfo(lat, lon, rad) {
           var name = $("<br><h3>").append($("<a>").text(results[i].name).attr("href", results[i].url))
           var summary = $("<p>").text(results[i].summary)
           var dist = $("<p>").text("Distance: " + results[i].length + " miles")
-          var wh = $("<div>").text("weather: " + weather);
+          var wh = $("<p>").text("weather: " + weather);
           //adds trail image
           var trailImage = $("<img>")
           trailImage.attr("src", results[i].imgSmall)
