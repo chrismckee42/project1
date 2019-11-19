@@ -55,7 +55,7 @@ function getHikeInfo(lat, lon, rad) {
       //for ea. hiking trail save lat/long to these variable
       latitude = results[i].latitude;
       longitude = results[i].longitude;
-      var weatherURL = "http://api.weatherbit.io/v2.0/current";
+      var weatherURL = "https://api.weatherbit.io/v2.0/current";
       weatherURL = weatherURL + "?key=fb86184ee63d4019a19812bec4768676";
       weatherURL = weatherURL + "&lat=" + latitude + "&lon=" + longitude;
       weatherURL = weatherURL + "&units=I";
