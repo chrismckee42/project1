@@ -43,38 +43,6 @@ function getHikeInfo(lat, lon, rad) {
   $.ajax({
     url: queryURL,
     method: "GET"
-  }).then(function (response) {
-    var results = response.trails
-
-    $("#inputHikes").empty()
-
-    //loops through all the returned trails
-    for (let i = 0; i < results.length; i++) {
-      const hikeDiv = $("<div>")
-      //adds Identifiers for Yelp API
-      hikeDiv.addClass("hike")
-      hikeDiv.attr("lat", results[i].latitude)
-      hikeDiv.attr("lon", results[i].longitude)
-      //adds trail name and distance
-      var name = $("<br><h3>").append($("<a>").text(results[i].name).attr("href", results[i].url))
-      var summary = $("<p>").text(results[i].summary)
-      var dist = $("<p>").text("Distance: " + results[i].length + " miles")
-      //adds trail image
-      var trailImage = $("<img>")
-      trailImage.attr("src", results[i].imgSmall)
-      trailImage.addClass("trail-pic")
-      //appends trail to page
-      hikeDiv.append(name);
-      hikeDiv.append(summary)
-      hikeDiv.append(dist)
-      hikeDiv.append(trailImage)
-      $("#inputHikes").append(hikeDiv)
-    }
-
-  });
-
-}
-
   }).then(function (response) //hiking trail data
   {
     console.log('response');
@@ -125,4 +93,3 @@ function getHikeInfo(lat, lon, rad) {
       }
     });
 }
-
