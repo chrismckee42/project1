@@ -16,12 +16,36 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 
-p { 
+.selected { 
     font-family: 'Pacifico', cursive;
     font-family: 'Acme', sans-serif;
 }
 
 img { 
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.eachhike { 
+    border: solid lightgray 1px;
+    margin: 15px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.inline { 
+    display: inline;
+}
+
+p { 
+    font-family: 'Muli', sans-serif;
+}
+
+h3 { 
+    font-family: 'Pacifico', cursive;
+    font-family: 'Acme', sans-serif;
 }
