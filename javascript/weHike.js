@@ -68,7 +68,7 @@ function getHikeInfo(lat, lon, rad) {
         }).then(function (WeatherResponse) {
           console.log('WeatherResponse');
           console.log(WeatherResponse);
-          var weather = WeatherResponse.data[0].temp;
+          var weather = Math.round(WeatherResponse.data[0].temp);
           const hikeDiv = $("<div class='eachhike'>")
           //adds Identifiers for Yelp API
           hikeDiv.addClass("hike")
@@ -77,8 +77,8 @@ function getHikeInfo(lat, lon, rad) {
           //adds trail name and distance
           var name = $("<br><h3>").append($("<a>").text(results[i].name).attr("href", results[i].url))
           var summary = $("<p>").text(results[i].summary)
-          var dist = $("<p class='inline'>").text("Distance: " + results[i].length + " miles,  ")
-          var wh = $("<p>").text("Weather: " + weather);
+          var dist = $("<p class='inline'>").text("Distance: " + results[i].length + " miles  ")
+          var wh = $("<p>").text("Current Temperature: " + weather + "°F");
 
           //adds trail image
           var trailImage = $("<img>")
