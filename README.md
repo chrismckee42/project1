@@ -46,6 +46,15 @@ https://chrismckee42.github.io/project1/
     Ashish:     A demonstration of the application’s functionality
         https://chrismckee42.github.io/project1/
     Chris:      Directions for future development
+        Limitations of Hiking Project
+            Can't filter by 
+                difficulty
+                Maximum length (only minimum)
+                elevation
+            Can't pull 
+                elevation
+                dog friendliness
+        Certain 
         Map with pins  
             link to google maps
         filters for search critera
