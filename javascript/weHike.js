@@ -75,7 +75,7 @@ function getHikeInfo(lat, lon, rad) {
           hikeDiv.attr("lat", results[i].latitude)
           hikeDiv.attr("lon", results[i].longitude)
           //adds trail name and distance
-          var name = $("<br><h3>").append($("<a>").text(results[i].name).attr("href", results[i].url))
+          var name = $("<br><h3>").append($("<a>").text(results[i].name).attr("href", results[i].url).attr("target", "_blank"))
           var summary = $("<p>").text(results[i].summary)
           var dist = $("<p class='inline'>").text("Distance: " + results[i].length + " miles  ")
           var wh = $("<p>").text("Current Temperature: " + weather + "°F");
