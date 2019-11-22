@@ -1,4 +1,5 @@
 # project1: Hiking Trails
+https://chrismckee42.github.io/project1/
 
 # team members
     Chris
@@ -28,3 +29,11 @@
     click on Hike
         return details about hike (Chris)
         return Yelp suggestions (Ashish)
+        
+# Presentation
+    Danielle:   The overall concept of your application
+                Your motivation for developing the application
+                Your design process
+    Chris:      Technologies used (and a brief description of how they work)
+    Ashish:     A demonstration of the application’s functionality
+    Chris:      Directions for future development
