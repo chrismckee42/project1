@@ -35,5 +35,28 @@ https://chrismckee42.github.io/project1/
                 Your motivation for developing the application
                 Your design process
     Chris:      Technologies used (and a brief description of how they work)
+        Algolia Places
+            https://community.algolia.com/places/
+            Location autocomplete
+            powered by OpenStreetMap
+        Hiking Project API
+            https://www.hikingproject.com/data
+        WeatherBit API
+            https://www.weatherbit.io/api
     Ashish:     A demonstration of the application’s functionality
+        https://chrismckee42.github.io/project1/
     Chris:      Directions for future development
+        Limitations of Hiking Project
+            Can't filter by 
+                difficulty
+                Maximum length (only minimum)
+                elevation
+            Can't pull 
+                elevation
+                dog friendliness
+        Certain 
+        Map with pins  
+            link to google maps
+        filters for search critera
+        nearby restaurants
+        save favorite hikes
